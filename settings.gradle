@@ -1,0 +1,4 @@
+rootProject.name = 'microcloud'
+include 'microcloud-api'
+include 'microcloud-provider-dept-8001'
+

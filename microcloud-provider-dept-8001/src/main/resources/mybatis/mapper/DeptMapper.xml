@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wuzheng.microcloud.dao.DeptDao">
+    <sql id="columns">
+        dept_no,dept_name,db_loc
+    </sql>
+    <insert id="insert" parameterType="Dept">
+        INSERT INTO dept(dept_name, db_loc) VALUES(#{deptName}, #{dbLoc});
+    </insert>
+
+    <select id="findById" resultType="Dept" parameterType="long">
+        SELECT <include refid="columns"/> FROM dept
+        WHERE dept_no = #{deptNo};
+    </select>
+
+    <select id="findAll" resultType="Dept">
+        SELECT <include refid="columns"/> FROM dept;
+    </select>
+</mapper>
