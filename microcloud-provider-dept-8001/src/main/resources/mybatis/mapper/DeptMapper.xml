@@ -4,16 +4,20 @@
     <sql id="columns">
         dept_no,dept_name,db_loc
     </sql>
-    <insert id="insert" parameterType="Dept">
-        INSERT INTO dept(dept_name, db_loc) VALUES(#{deptName}, #{dbLoc});
+    <insert id="insert" parameterType="Dept" useGeneratedKeys="true" keyProperty="deptNo" keyColumn="dept_no">
+        INSERT INTO dept(dept_name, db_loc) VALUES(#{deptName}, database());
     </insert>
 
     <select id="findById" resultType="Dept" parameterType="long">
-        SELECT <include refid="columns"/> FROM dept
+        SELECT
+        <include refid="columns"/>
+        FROM dept
         WHERE dept_no = #{deptNo};
     </select>
 
     <select id="findAll" resultType="Dept">
-        SELECT <include refid="columns"/> FROM dept;
+        SELECT
+        <include refid="columns"/>
+        FROM dept;
     </select>
 </mapper>

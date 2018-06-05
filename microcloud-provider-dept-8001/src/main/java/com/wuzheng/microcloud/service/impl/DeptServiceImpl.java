@@ -21,8 +21,9 @@ public class DeptServiceImpl implements DeptService {
     private DeptDao deptDao;
 
     @Override
-    public Integer createNew(Dept dept) {
-        return deptDao.insert(dept);
+    public Boolean createNew(Dept dept) {
+        deptDao.insert(dept);
+        return true;
     }
 
     @Override

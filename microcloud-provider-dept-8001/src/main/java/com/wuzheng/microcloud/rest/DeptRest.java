@@ -31,7 +31,7 @@ public class DeptRest {
     }
 
     @PostMapping("/add")
-    public Integer add(Dept dept) {
+    public Boolean add(@RequestBody Dept dept) {
         return deptService.createNew(dept);
     }
 }

@@ -2,7 +2,6 @@ package com.wuzheng.microcloud.dao;
 
 import com.wuzheng.microcloud.entity.Dept;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Options;
 
 import java.util.List;
 
@@ -15,7 +14,6 @@ import java.util.List;
  */
 @Mapper
 public interface DeptDao {
-    @Options(useGeneratedKeys = true)
     Integer insert(Dept dept);
 
     Dept findById(Long deptNo);

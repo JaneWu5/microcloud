@@ -12,7 +12,7 @@ import java.util.List;
  * @Description: dept服务接口
  */
 public interface DeptService {
-    Integer createNew(Dept dept);
+    Boolean createNew(Dept dept);
 
     Dept findById(Long deptNo);
 
