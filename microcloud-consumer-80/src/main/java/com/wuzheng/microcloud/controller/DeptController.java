@@ -4,7 +4,6 @@ import com.wuzheng.microcloud.entity.Dept;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,7 +24,7 @@ import java.util.List;
 public class DeptController {
     public static final String DEPT_GET_URL = "http://localhost:8001/dept/get/";
     public static final String DEPT_LIST_URL = "http://localhost:8001/dept/list";
-    public static final String   DEPT_ADD_URL = "http://localhost:8001/dept/add";
+    public static final String DEPT_ADD_URL = "http://localhost:8001/dept/add";
 
     @Resource
     private RestTemplate restTemplate;

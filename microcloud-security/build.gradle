@@ -22,11 +22,21 @@ repositories {
     mavenCentral()
 }
 
+jar {
+    enabled = true
+}
+
+bootJar {
+    manifest {
+        attributes 'Start-Class': 'com.wuzheng.microcloud.Dept8001StartSpringCloudApplication'
+    }
+}
+
 
 dependencies {
+    compile('org.springframework.boot:spring-boot-starter-security')
     compile('org.springframework.boot:spring-boot-starter-web')
     runtime('org.springframework.boot:spring-boot-devtools')
-
-    compile project(":microcloud-api")
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('org.springframework.security:spring-security-test')
 }

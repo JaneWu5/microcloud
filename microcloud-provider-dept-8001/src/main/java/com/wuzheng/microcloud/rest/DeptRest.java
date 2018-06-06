@@ -5,6 +5,7 @@ import com.wuzheng.microcloud.service.DeptService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -33,5 +34,10 @@ public class DeptRest {
     @PostMapping("/add")
     public Boolean add(@RequestBody Dept dept) {
         return deptService.createNew(dept);
+    }
+
+    @GetMapping("/sessionId")
+    public Object id(HttpServletRequest request) {
+        return request.getSession().getId();
     }
 }

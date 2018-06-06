@@ -2,4 +2,4 @@ rootProject.name = 'microcloud'
 include 'microcloud-api'
 include 'microcloud-provider-dept-8001'
 include 'microcloud-consumer-80'
-
+include 'microcloud-security'
