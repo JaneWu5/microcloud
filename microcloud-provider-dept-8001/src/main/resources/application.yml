@@ -34,6 +34,8 @@ eureka:
 info:
   app.name: microcloud
   company.name: wuzheng.com
+  build.artifactId: microcloud-provider-dept-8001
+  build.version: 1.0.0-SNAPSHOT
 
 
 
