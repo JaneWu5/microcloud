@@ -23,4 +23,18 @@ spring:
       name: wuzheng
       password: hello
       roles: USER
+  application:
+    name: microcloud-provider-dept-8001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: microcloud-provider-dept-8001
+info:
+  app.name: microcloud
+  company.name: wuzheng.com
+
+
+
 
