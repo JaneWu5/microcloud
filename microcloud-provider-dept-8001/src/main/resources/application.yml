@@ -18,11 +18,11 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 200
-  security:
-    user:
-      name: wuzheng
-      password: hello
-      roles: USER
+#  security:
+#    user:
+#      name: wuzheng
+#      password: hello
+#      roles: USER
   application:
     name: microcloud-provider-dept-8001
 eureka:
