@@ -2,6 +2,7 @@ package com.wuzheng.microcloud.rest;
 
 import com.wuzheng.microcloud.entity.Dept;
 import com.wuzheng.microcloud.service.DeptService;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -20,6 +21,13 @@ import java.util.List;
 public class DeptRest {
     @Resource
     private DeptService deptService;
+    @Resource
+    private DiscoveryClient client; //Eureka服务发现
+
+    @GetMapping("/discovery")
+    public DiscoveryClient discovery() {
+        return this.client;
+    }
 
     @GetMapping("/get/{id}")
     public Dept get(@PathVariable("id") Long id) {
