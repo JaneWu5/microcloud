@@ -7,7 +7,6 @@ eureka:
   client:
     registerWithEureka: false #当前微服务（发现服务7001）不应注册在Eureka中
     fetchRegistry: false #不通过Eureka获取注册信息
-    serviceUrl:
+    service-url:
       defaultZone: http://janewu:hello1@${eureka.instance.hostname}:${server.port}/eureka/
-
 
