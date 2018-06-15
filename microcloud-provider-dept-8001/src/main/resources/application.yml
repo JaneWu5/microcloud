@@ -28,7 +28,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://janewu:hello1@localhost:7001/eureka
+      defaultZone: http://janewu:hello1@eureka-7001.com:7001/eureka/,http://janewu:hello1@eureka-7002.com:7002/eureka/,http://janewu:hello1@eureka-7003.com:7003/eureka/
   instance:
     instance-id: microcloud-provider-dept-8001
     prefer-ip-address: true

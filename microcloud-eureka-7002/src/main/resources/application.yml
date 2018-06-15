@@ -1,14 +1,14 @@
 server:
-  port: 7001
+  port: 7002
 eureka:
   instance:
-    hostname: eureka-7001.com
-    appname: eureka-7001.com
+    hostname: eureka-7002.com
+    appname: eureka-7002.com
   client:
     registerWithEureka: false #当前微服务（发现服务7001）不应注册在Eureka中
     fetchRegistry: false #不通过Eureka获取注册信息
     service-url:
-      defaultZone: http://janewu:hello1@eureka-7002.com:7002/eureka/,http://janewu:hello1@eureka-7003.com:7003/eureka/
+      defaultZone: http://janewu:hello1@eureka-7001.com:7001/eureka/,http://janewu:hello1@eureka-7003.com:7003/eureka/
 spring:
   application:
-    name: eureka-7001.com
+    name: eureka-7002.com
